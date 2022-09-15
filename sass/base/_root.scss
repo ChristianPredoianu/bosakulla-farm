@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+
+:root {
+  --clr-primary: #a1a1a1;
+  --clr-font-light: #f8f8f8;
+  --clr-font-dark: #222222;
+  --clr-brdr: #3a3a3a;
+
+  --fs-italic: italic;
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --brdr-section: 2px solid;
+}

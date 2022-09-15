@@ -1,0 +1,103 @@
+@use '../abstracts/' as *;
+
+.header {
+  @include flex-config($justify: space-between, $align: center);
+  @include position($pos: absolute, $top: 0, $left: 0);
+  min-height: 10vh;
+  width: 100%;
+
+  @include respond(sm) {
+    min-height: 5vh;
+  }
+}
+
+.navbar {
+  @include flex-config($justify: flex-end, $align: center);
+  width: 100%;
+  z-index: 50;
+  /*   background-color: red; */
+
+  @include respond(sm) {
+    justify-content: center;
+  }
+
+  @include respond(lg) {
+    width: 50%;
+  }
+}
+
+.nav-links {
+  @include flex-config($direction: column, $justify: center);
+  @include position($pos: fixed, $top: 0, $left: -100%);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: var(--clr-font-light);
+  z-index: 10;
+  text-transform: uppercase;
+
+  @include respond(sm) {
+    position: initial;
+
+    height: auto;
+
+    @include flex-config(
+      $direction: row,
+      $justify: space-between,
+      $align: center
+    );
+    height: auto;
+  }
+}
+
+.nav-links.active {
+  left: 0;
+  background-color: red;
+}
+
+.nav-item {
+  position: relative;
+  margin: 2.5rem 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  z-index: 200;
+
+  &:hover {
+    transform: scale(1.1);
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    font-size: 1.3rem;
+    transition: all 0.6s linear;
+  }
+}
+
+.hamburger {
+  position: relative;
+  z-index: 200;
+
+  @include respond(sm) {
+    display: none;
+  }
+
+  .active &__bar:nth-child(2) {
+    transform: translateY(1px) rotate(137deg);
+  }
+
+  .active &__bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  &__bar {
+    display: block;
+    width: 2.5rem;
+    height: 0.3rem;
+    margin: 0.5rem auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--clr-font-light);
+  }
+}
