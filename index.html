@@ -3,7 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
     <link href="./sass/main.scss" rel="stylesheet" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bösakulla Gård</title>
   </head>
@@ -12,6 +26,9 @@
       <nav class="navbar container">
         <ul class="nav-links" id="nav-links">
           <li class="nav-item">
+            <a href="#" class="nav-item__link">Hem</a>
+          </li>
+          <li class="nav-item">
             <a href="#" class="nav-item__link">Bösakulla Gård</a>
           </li>
           <li class="nav-item">
@@ -19,6 +36,9 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-item__link">Köttlåda</a>
+          </li>
+          <li class="nav-logo">
+            <img src="./assets/logo.png" alt="" />
           </li>
           <li class="nav-item">
             <a href="#" class="nav-item__link">Skogsbruk maskinstation</a>
@@ -40,7 +60,184 @@
         <source src="./assets/bg-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <img src="./assets/logo.png" class="hero-section__logo-mobile" alt="" />
     </section>
+    <section class="section">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h1 class="column-text__heading">Bösakulla Gård</h1>
+            <p class="column-text__paragraph">
+              Bösakulla Gård är en naturligt vacker belägen plats mitt i
+              snapphane land i Östra Göinge. Gården består utav ca 65 hektar
+              mark, varav 20 hektar bete/ vall och ca 45 hektar skog. Vi är
+              sjätte generationen som bor på gården här idag. Gården har stannat
+              i samma släkt sedan år 1982 då Siss och Thomas Mattisson med sonen
+              Martin köpte marken. Gårdens huvudsakliga verksamheter består idag
+              utav skogsbruk och djurhållning. Vår vision är att uppnå cirkulär
+              ekonomi där klimatet ska genomsyra tänket i allt vi gör och
+              investerar i framöver. "Zero Foot Print" är ett ledord vi anammat
+              på gården, att kunna visa vägen för ett nytt framtida tänk inom
+              ett hållbart lantbruk, som vi sedan ska fortsätta i många framtida
+              generationer utan att påverka naturen och klimatet. På gården
+              använder vi oss utav metoder inom "LEAN Production" som kommer
+              från Japan och fordonsbranschen, vilket innefattar att "eliminera
+              slöseri" och förbättra tillvägagångssätten med hjälp utav
+              skandaliserat arbetssätt.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/tree.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h1 class="column-text__heading">Hållbarhet & Ansvar</h1>
+            <p class="column-text__paragraph">
+              När det kommer till vårt gemensamma ansvar att bevara och ta hand
+              om vår "moder jord" för framtida generationer försöker vi på
+              gården ständigt tänka utanför "boxen" och komma på nya
+              förbättringar för att bidra till just detta. Vi har ökat
+              kompetensen på gården och läst på kring de 16 klimatmålen inom
+              jordbruket och bestämt oss för att prioritera vårt arbete kring:
+              Frisk luft, Giftfri miljö, Levande skogar, Ett rikt växt och
+              djurliv.
+            </p>
+            <p class="column-text__paragraph">
+              Alla våra transportfordon drivs utav el. Vi producerar all vår el
+              med hjälp utav solceller. Vi eliminerar onödiga transporter med
+              fossila bränslen.
+            </p>
+            <p class="column-text__paragraph">
+              Vi besprutar inte marken med gift. Vi använder inte konstgödsel.
+              Vi plöjer inte marken, vilket resulterar i att den binder mer kol
+              som tar upp mer koldioxid från växterna.
+            </p>
+            <p class="column-text__paragraph">
+              Vi röjer och gallrar skogen i rätt tid. Vi återplanterar all skog
+              som huggs ner när den är färdig. Vi utfodrar viltet som lever i
+              skogen.
+            </p>
+            <p class="column-text__paragraph">
+              Vi naturbetar all vår betesmark, vall och låter korna gödsla
+              marken under tiden. Vi tara vara och utökar antalet blommor för
+              binas skull. Vi sätter upp "bihus" på olika ställen runt om gården
+              för att utöka antalet bin. Vi odlar mycket egen mat på gården.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/recycle.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section-swiper">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide--1">
+            <img src="./assets/farm1.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+          <div class="swiper-slide swiper-slide--2">
+            <img src="./assets/farm2.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+          <div class="swiper-slide swiper-slide--3">
+            <img src="./assets/farm3.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h1 class="column-text__heading">Bösakulla Honung</h1>
+            <p class="column-text__paragraph">
+              Vi säljer honung från bygden och närliggande bisamhällen för att i
+              den högsta grad hålla den biologiska mångfalden vid liv. Detta är
+              något vi vill bidra med för att bibehålla växtriket och öka
+              antalet bin i vårt vackra närliggande landskap. Sedan vi börjat
+              med att beta betesmarkerna i etapper utan konstgödsel upplever vi
+              att mängden bin och växter har ökat i antalet radikalt de sista
+              åren, något som vi ser mycket positivt på. Vi sår blommor på våren
+              på platsen runt om gården som inte brukas för att öka biantalet
+              ytterliggare.
+            </p>
+            <p class="column-text__paragraph">
+              Intresserad av att köpa Honung av oss? Klicka på länken nedan.
+            </p>
+            <button class="cta-btn">Handla</button>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/honey.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h1 class="column-text__heading">Ekologiska Ägg</h1>
+            <p class="column-text__paragraph">
+              På gården finns ett antal välmående äggproducerande hönor. Våra
+              ägg kommer från grönbetande höns som får det bästa värpfodret att
+              tillgå. På sommaren går hönsen ute på gårdens gräsytor och på
+              vintern får de komma in i vårt numera ombyggda gamla mjölkkostall
+              där de trivs bra bland sågspån, hö och halm.
+            </p>
+            <p class="column-text__paragraph">
+              Intresserad av att köpa ägg av oss? Klicka på länken nedan.
+            </p>
+            <button class="cta-btn">Handla</button>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/eggs.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h1 class="column-text__heading">Ekologisk köttlåda</h1>
+            <p class="column-text__paragraph">
+              Våra djur går ute året om med tillgång till vindskydd. Djuren
+              "naturbetar" på sommaren för att hålla den biologiska mångfalden
+              igång och på vintern äter de endast hö ensilage, som gödslats
+              efter djuren gått och betat gräset. Samtliga djur på gården är
+              stambokförda och registrerade med de bästa generna för att uppnå
+              det bästa tänkbara resultatet. På Bösakulla gård använder vi oss
+              varken av bekämpningsmedel eller konstgödsel och all slakt sker på
+              gården för att undvika stressade djur och onödiga transporter som
+              påverkar klimatet nevativt. Köttlådorna vi levererar är ekologiska
+              och raserna vi har är den flitiga betande Irländska rasen Dexter
+              och den japanska Wagyu, även känd som världens finaste Kobe kött,
+              riktiga delikatesser.
+            </p>
+            <p class="column-text__paragraph">
+              Intresserad av att köpa Köttlådor av oss? Klicka på länken nedan.
+            </p>
+            <button class="cta-btn">Handla</button>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/eggs.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+
     <script type="module" src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

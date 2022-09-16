@@ -1,14 +1,27 @@
 @use '../abstracts/' as *;
 
 :root {
-  --clr-primary: #a1a1a1;
-  --clr-font-light: #f8f8f8;
-  --clr-font-dark: #222222;
+  --bg-clr-primary: #ccc2b7;
+  --clr-light-white: #e7e6e6;
+  --clr-dark: #222222;
   --clr-brdr: #3a3a3a;
 
-  --fs-italic: italic;
+  --fs-heading: clamp(2.5rem, 2vw, 3rem);
+  --fs-text: clamp(1.3rem, 2vw, 1.8rem);
   --fw-normal: 400;
   --fw-bold: 700;
+  --fst-italic: italic;
+  --lh-paragraph: 1.5;
 
-  --brdr-section: 2px solid;
+  --row-padding: 10rem 3rem;
+
+  @include respond(md) {
+    --row-padding: 10rem 3rem 20rem 3rem;
+  }
+
+  --brdr-section: 7px solid var(--clr-dark);
+
+  --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
