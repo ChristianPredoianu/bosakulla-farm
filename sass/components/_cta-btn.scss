@@ -1,0 +1,20 @@
+.cta-btn {
+  background-color: var(--clr-dark);
+  color: var(--bg-clr-primary);
+  padding: 1.5rem 4rem;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  letter-spacing: 0.1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(5px);
+    background-color: black;
+  }
+}
