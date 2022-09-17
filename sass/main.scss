@@ -31,18 +31,26 @@ body {
   }
 
   &__logo-mobile {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include position($pos: absolute, $top: 50%, $left: 50%);
     transform: translate(-50%, -50%);
+    z-index: 2;
 
     @include respond(md) {
       display: none;
     }
   }
+
+  &__arrow-down {
+    @include position($pos: absolute, $bottom: 5rem, $left: 50%);
+    transform: translate(-50%, -5rem);
+    animation: MoveUpDown 1.5s linear infinite;
+    z-index: 50;
+    width: 3rem;
+  }
 }
 
 .section {
+  position: relative;
   background-color: var(--bg-clr-primary);
   color: var(--clr-light-white);
   border-bottom: var(--brdr-section);
@@ -53,29 +61,28 @@ body {
 }
 
 .row {
-  @include flex-config($direction: column-reverse);
+  @include flex-config($direction: column-reverse, $align: center);
   padding: var(--row-padding);
+  min-height: 100vh;
 
   @include respond(md) {
     flex-direction: row;
+    justify-content: space-around;
   }
 }
 
 .column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-config($direction: column, $justify: center, $align: center);
 
   @include respond(md) {
-    flex: 1;
-    justify-content: center;
+    width: 40%;
   }
 
   &__img {
     width: 40%;
 
     @include respond(md) {
-      width: 50%;
+      width: 80%;
     }
   }
 }
@@ -99,11 +106,30 @@ body {
     font-size: var(--fs-text);
     line-height: var(--lh-paragraph);
     font-style: var(--fst-italic);
-    text-align: justify;
-    text-justify: inter-word;
+
+    @include respond(md) {
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
     &:not(:first-of-type) {
       margin-top: 1.5rem;
+    }
+  }
+
+  &__img-paragraph {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  &__link {
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark);
+    margin-top: 1rem;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      color: #777777;
     }
   }
 }
@@ -115,5 +141,15 @@ body {
 
   @include respond(md) {
     padding: 0;
+  }
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
   }
 }
