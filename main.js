@@ -1,6 +1,8 @@
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 const navItemLinks = document.querySelectorAll('.nav-item');
+const paginationBullets = document.querySelectorAll('.pagination__bullet');
+const sections = document.querySelectorAll('section');
 
 function toggleNavLinks() {
   hamburger.classList.toggle('active');
@@ -36,4 +38,33 @@ const swiper = new Swiper('.mySwiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+});
+
+//Pagination bullets
+paginationBullets.forEach((paginationBullet) => {
+  paginationBullet.addEventListener('click', function () {
+    paginationBullets.forEach((paginationBullet) => {
+      paginationBullet.classList.remove('active-bullet');
+    });
+    this.classList.add('active-bullet');
+  });
+});
+
+window.addEventListener('scroll', (e) => {
+  const sections = document.querySelectorAll('section');
+  let currentSection;
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 300) {
+      currentSection = section.id;
+    }
+  });
+
+  paginationBullets.forEach((paginationBullet) => {
+    paginationBullet.classList.remove('active-bullet');
+    if (paginationBullet.classList.contains(currentSection)) {
+      paginationBullet.classList.add('active-bullet');
+    }
+  });
 });
