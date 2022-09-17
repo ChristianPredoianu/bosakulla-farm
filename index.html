@@ -54,15 +54,39 @@
         </div>
       </nav>
     </header>
-    <section class="hero-section">
+    <section class="hero-section" id="hero">
       <div class="hero-section__overlay"></div>
       <video playsinline autoplay muted loop class="hero-section__bg-video">
         <source src="./assets/bg-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+  
+    </div>
       <img src="./assets/logo.png" class="hero-section__logo-mobile" alt="" />
+      <a href="#farm">
+        <img
+          src="./assets/arrow-down.png"
+          class="hero-section__arrow-down"
+          alt="down arrow"
+      /></a>
     </section>
-    <section class="section">
+    <section class="section" id="farm">
+      <div class="pagination">
+        <a href="#hero"
+          ><div class="pagination__bullet hero active-bullet"></div
+        ></a>
+        <a href="#farm"><div class="pagination__bullet farm"></div></a>
+        <a href="#recykle"> <div class="pagination__bullet recykle"></div></a>
+        <a href="#swiper"><div class="pagination__bullet swiper"></div></a>
+        <a href="#honey"><div class="pagination__bullet honey"></div></a>
+        <a href="#eggs"><div class="pagination__bullet eggs"></div></a>
+        <a href="#meat"><div class="pagination__bullet meat"></div></a>
+        <a href="#wood"><div class="pagination__bullet wood"></div></a>
+        <a href="#christmas"
+          ><div class="pagination__bullet christmas"></div
+        ></a>
+        <a href="#mashines"><div class="pagination__bullet mashines"></div></a>
+      </div>
       <div class="row container">
         <div class="column">
           <div class="column-text">
@@ -92,11 +116,11 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="recykle">
       <div class="row container">
         <div class="column">
           <div class="column-text">
-            <h1 class="column-text__heading">Hållbarhet & Ansvar</h1>
+            <h2 class="column-text__heading">Hållbarhet & Ansvar</h2>
             <p class="column-text__paragraph">
               När det kommer till vårt gemensamma ansvar att bevara och ta hand
               om vår "moder jord" för framtida generationer försöker vi på
@@ -132,10 +156,21 @@
         </div>
         <div class="column">
           <img src="./assets/recycle.png" alt="" class="column__img" />
+          <p class="column-text__paragraph column-text__img-paragraph">
+            Läs gärna mer kring de 16 Svenska klimatmålen på länken nedan i
+            jordbrukssektorn:
+            <a
+              href="https://sverigesmiljomal.se/miljomalen"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              class="column-text__link"
+              >Miljömålen</a
+            >
+          </p>
         </div>
       </div>
     </section>
-    <section class="section-swiper">
+    <section class="section-swiper" id="swiper">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-slide--1">
@@ -156,11 +191,11 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="honey">
       <div class="row container">
         <div class="column">
           <div class="column-text">
-            <h1 class="column-text__heading">Bösakulla Honung</h1>
+            <h2 class="column-text__heading">Bösakulla Honung</h2>
             <p class="column-text__paragraph">
               Vi säljer honung från bygden och närliggande bisamhällen för att i
               den högsta grad hålla den biologiska mångfalden vid liv. Detta är
@@ -183,11 +218,11 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="eggs">
       <div class="row container">
         <div class="column">
           <div class="column-text">
-            <h1 class="column-text__heading">Ekologiska Ägg</h1>
+            <h2 class="column-text__heading">Ekologiska Ägg</h2>
             <p class="column-text__paragraph">
               På gården finns ett antal välmående äggproducerande hönor. Våra
               ägg kommer från grönbetande höns som får det bästa värpfodret att
@@ -206,11 +241,11 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="meat">
       <div class="row container">
         <div class="column">
           <div class="column-text">
-            <h1 class="column-text__heading">Ekologisk köttlåda</h1>
+            <h2 class="column-text__heading">Ekologisk köttlåda</h2>
             <p class="column-text__paragraph">
               Våra djur går ute året om med tillgång till vindskydd. Djuren
               "naturbetar" på sommaren för att hålla den biologiska mångfalden
@@ -232,7 +267,83 @@
           </div>
         </div>
         <div class="column">
-          <img src="./assets/eggs.png" alt="" class="column__img" />
+          <img src="./assets/meat.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section" id="wood">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h2 class="column-text__heading">Bösakulla Brasved</h2>
+            <p class="column-text__paragraph">
+              När det är dags att röja/gallra för att få en bra tillväxt i den
+              friska skogen låter vi kvistar och toppar ligga kvar i skogen för
+              att återföra näring och gödsel till marken. Stammarna skotar vi ut
+              och tillverkar brasved utav som i nästa steg värmer många hus runt
+              om i södra Sverige
+            </p>
+            <p class="column-text__paragraph">
+              Intresserad av att köpa ved av oss? Klicka på länken nedan.
+            </p>
+
+            <button class="cta-btn">Handla</button>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/wood.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section" id="christmas">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h2 class="column-text__heading">Julgranar</h2>
+            <p class="column-text__paragraph">
+              Vi planterar ett hundratal nya kungsgranar varje år som går att
+              "boka". Kunden får boka sin gran och själv komma ut och hugga den
+              när det är dags. På så sätt hugger vi inte ner mer granar än som
+              efterfrågas, vilket också kan anses vara klimatsmart och att inte
+              slösa mer på resurserna i onödan.
+            </p>
+            <p class="column-text__paragraph">
+              Intresserad utav våra tjänster eller vill veta mer? Klicka på
+              länken nedan.
+            </p>
+
+            <button class="cta-btn">Mer info</button>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/christmas-tree.png" alt="" class="column__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section" id="mashines">
+      <div class="row container">
+        <div class="column">
+          <div class="column-text">
+            <h2 class="column-text__heading">Skogsbruk & Maskinstation</h2>
+            <p class="column-text__paragraph">
+              Bösakulla gård kan erbjuda flertalet tjänster inom jordbruk,
+              entreprenad och skogssektorn. Vi utför allt ifrån plantering,
+              röjningar, manuell huggning, gallringar och skotning utav virket
+              med en liten Rottne F10. Inom jordbruket kan vi erbjuda diverse
+              tjänster, allt ifrån stängsla till redskapsburna jordbruksmaskiner
+              efter vår New Holland Elite T6020. Eller varför inte skogsdikning
+              eller annan fältgrävning med en mindre banddriven grävmaskin.
+            </p>
+            <p class="column-text__paragraph">
+              Intresserad utav våra tjänster eller vill veta mer? Klicka på
+              länken nedan.
+            </p>
+
+            <button class="cta-btn">Mer info</button>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/mashines.png" alt="" class="column__img" />
         </div>
       </div>
     </section>
