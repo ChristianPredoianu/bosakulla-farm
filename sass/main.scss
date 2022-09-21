@@ -3,8 +3,13 @@
 @use './utilities/' as *;
 @use './components/' as *;
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 .hero-section {
@@ -63,9 +68,9 @@ body {
 .row {
   @include flex-config($direction: column-reverse, $align: center);
   padding: var(--row-padding);
-  min-height: 100vh;
 
   @include respond(md) {
+    min-height: 100vh;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -79,10 +84,46 @@ body {
   }
 
   &__img {
-    width: 40%;
+    width: 60%;
 
     @include respond(md) {
       width: 80%;
+    }
+
+    &--honey {
+      transform: scale(1.2);
+
+      @include respond(sm) {
+        transform: scale(1.3);
+      }
+
+      @include respond(md) {
+        transform: scale(1.9);
+        margin-right: -15rem;
+      }
+
+      @include respond(lg) {
+        margin-right: -10rem;
+      }
+    }
+
+    &--mashines {
+      transform: scale(2.3);
+      margin-top: 5rem;
+
+      @include respond(sm) {
+        transform: scale(2);
+      }
+
+      @include respond(md) {
+        transform: scale(1.9);
+        margin-right: -12rem;
+        margin-top: 0;
+      }
+
+      @include respond(lg) {
+        margin-right: -40rem;
+      }
     }
   }
 }
@@ -132,11 +173,15 @@ body {
       color: #777777;
     }
   }
+
+  &--mashines {
+    margin-top: 5rem;
+  }
 }
 
 .section-swiper {
   background-color: var(--bg-clr-primary);
-  padding: var(--row-padding-mobile);
+  padding: 5rem 2rem;
   border-bottom: var(--brdr-section);
 
   @include respond(md) {
