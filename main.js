@@ -3,10 +3,25 @@ const navLinks = document.getElementById('nav-links');
 const navItemLinks = document.querySelectorAll('.nav-item');
 const paginationBullets = document.querySelectorAll('.pagination__bullet');
 const sections = document.querySelectorAll('section');
+const hamburgerBars = document.querySelectorAll('.hamburger__bar');
+
+gsap.registerPlugin(ScrollTrigger);
+
+let mm = gsap.matchMedia();
 
 function toggleNavLinks() {
   hamburger.classList.toggle('active');
   navLinks.classList.toggle('active');
+
+  changeHamburgerColor();
+}
+
+function changeHamburgerColor() {
+  if (navLinks.classList.contains('active')) {
+    hamburgerBars.forEach((hamburgerBar) => {
+      hamburgerBar.style.backgroundColor = 'var(--bg-clr-primary)';
+    });
+  }
 }
 
 function closeNavLinks() {
@@ -30,6 +45,7 @@ hamburger.addEventListener('click', toggleNavLinks);
 //Swiper
 
 const swiper = new Swiper('.mySwiper', {
+  grabCursor: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -66,5 +82,57 @@ window.addEventListener('scroll', (e) => {
     if (paginationBullet.classList.contains(currentSection)) {
       paginationBullet.classList.add('active-bullet');
     }
+  });
+});
+
+//Gsap
+
+const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power2.out' } });
+
+mm.add('(max-width: 1024px)', () => {
+  tl.from('.header', { y: -100 });
+  tl.from('.hero-section__arrow-down', { y: -500, opacity: 0 });
+
+  return () => {
+    tl.kill();
+  };
+});
+
+mm.add('(min-width: 1024px)', () => {
+  tl.from('.header', { y: -100 });
+  tl.from('.hero-section__arrow-down', { y: -500, opacity: 0 });
+  tl.from('.pagination__bullet', { opacity: 0, stagger: 0.1 });
+
+  return () => {
+    tl.kill();
+  };
+});
+
+//Scrolltrigger
+gsap.utils.toArray('.section').forEach((section) => {
+  const columnTexts = section.querySelectorAll('.column-text');
+  const columnImgs = section.querySelectorAll('.column__img');
+
+  const fade = gsap
+    .timeline({ paused: true })
+    .from(columnTexts, { opacity: 0, duration: 1.5 });
+
+  const scale = gsap.timeline({ paused: true }).from(columnImgs, {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    scale: 0.5,
+  });
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: 'top center',
+
+    onEnter: () => {
+      fade.play(), scale.play();
+    },
+    onLeaveBack: () => {
+      fade.reverse(), scale.reverse();
+    },
   });
 });
