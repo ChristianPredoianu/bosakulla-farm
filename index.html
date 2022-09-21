@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
@@ -25,23 +28,23 @@
     <header class="header">
       <nav class="navbar container">
         <ul class="nav-links" id="nav-links">
-          <li class="nav-item">
-            <a href="#" class="nav-item__link">Hem</a>
+          <li class="nav-item active-link">
+            <a href="#hero" class="nav-item__link">Hem</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Bösakulla Gård</a>
+            <a href="#farm" class="nav-item__link">Bösakulla Gård</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Ägg</a>
+            <a href="#eggs" class="nav-item__link">Ägg</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Köttlåda</a>
+            <a href="#meat" class="nav-item__link">Köttlåda</a>
           </li>
           <li class="nav-logo">
-            <img src="./assets/logo.png" alt="" />
+            <img src="./assets/logo.png" alt="" class="nav-logo__img" />
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Skogsbruk maskinstation</a>
+            <a href="#mashines" class="nav-item__link">Skogsbruk maskinstation</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-item__link">Kontakt</a>
@@ -87,7 +90,7 @@
         ></a>
         <a href="#mashines"><div class="pagination__bullet mashines"></div></a>
       </div>
-      <div class="row container">
+      <div class="row container first-row">
         <div class="column">
           <div class="column-text">
             <h1 class="column-text__heading">Bösakulla Gård</h1>
@@ -116,6 +119,7 @@
         </div>
       </div>
     </section>
+    
     <section class="section" id="recykle">
       <div class="row container">
         <div class="column">
@@ -155,7 +159,7 @@
           </div>
         </div>
         <div class="column">
-          <img src="./assets/recycle.png" alt="" class="column__img" />
+          <img src="./assets/recycle.png" alt="" class="column__img column__img--recykle" />
           <p class="column-text__paragraph column-text__img-paragraph">
             Läs gärna mer kring de 16 Svenska klimatmålen på länken nedan i
             jordbrukssektorn:
@@ -164,7 +168,7 @@
               rel="noopener noreferrer nofollow"
               target="_blank"
               class="column-text__link"
-              >Miljömålen</a
+              ><p class="column-text__paragraph">Miljömålen</p></a
             >
           </p>
         </div>
@@ -214,7 +218,7 @@
           </div>
         </div>
         <div class="column">
-          <img src="./assets/honey.png" alt="" class="column__img" />
+          <img src="./assets/honey.png" alt="" class="column__img column__img--honey" />
         </div>
       </div>
     </section>
@@ -323,7 +327,7 @@
     <section class="section" id="mashines">
       <div class="row container">
         <div class="column">
-          <div class="column-text">
+          <div class="column-text column-text--mashines">
             <h2 class="column-text__heading">Skogsbruk & Maskinstation</h2>
             <p class="column-text__paragraph">
               Bösakulla gård kan erbjuda flertalet tjänster inom jordbruk,
@@ -343,12 +347,14 @@
           </div>
         </div>
         <div class="column">
-          <img src="./assets/mashines.png" alt="" class="column__img" />
+          <img src="./assets/mashines.png" alt="" class="column__img column__img--mashines" />
         </div>
       </div>
     </section>
 
     <script type="module" src="/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
