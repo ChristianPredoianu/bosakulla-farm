@@ -3,9 +3,9 @@
 .pagination {
   display: none;
 
-  gap: 1.5rem;
-  @include position($pos: fixed, $top: 37rem, $right: 3rem);
-  z-index: 1000;
+  @include position($pos: fixed, $top: 50%, $right: 2em);
+  transform: translate(-2rem, -50%);
+  z-index: 999;
 
   &__bullet {
     width: 1.5rem;
@@ -16,6 +16,7 @@
 
   @include respond(md) {
     @include flex-config($direction: column);
+    gap: 1.5rem;
   }
 }
 
