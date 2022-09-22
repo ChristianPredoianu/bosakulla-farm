@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -57,6 +59,21 @@
         </div>
       </nav>
     </header>
+    <div class="modal" id="modal">
+      <div class="modal__bg" id="modal-bg"></div>
+      <div class="modal__container">
+        <div class="form-container form-container--modal">
+          <form class="form-group">
+            <input type="text" class="form-group__form-field"  placeholder="Namn" required />
+            <input type="email" class="form-group__form-field"  placeholder="E-post" required />
+            <input type="number" class="form-group__form-field"  placeholder="Telefon" required />
+            <input type="text" class="form-group__form-field"  placeholder="Meddelande" required />
+            <button class="cta-btn cta-btn--form">Skicka Meddelande</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
     <section class="hero-section" id="hero">
       <div class="hero-section__overlay"></div>
       <video playsinline autoplay muted loop class="hero-section__bg-video">
@@ -65,7 +82,7 @@
       </video>
   
     </div>
-      <img src="./assets/logo.png" class="hero-section__logo-mobile" alt="" />
+      <img src="./assets/logo.png" class="hero-section__logo-mobile" alt="logo" />
       <a href="#farm">
         <img
           src="./assets/arrow-down.png"
@@ -89,6 +106,7 @@
           ><div class="pagination__bullet christmas"></div
         ></a>
         <a href="#mashines"><div class="pagination__bullet mashines"></div></a>
+        <a href="#footer"><div class="pagination__bullet footer-section"></div></a>
       </div>
       <div class="row container first-row">
         <div class="column">
@@ -99,7 +117,7 @@
               snapphane land i Östra Göinge. Gården består utav ca 65 hektar
               mark, varav 20 hektar bete/ vall och ca 45 hektar skog. Vi är
               sjätte generationen som bor på gården här idag. Gården har stannat
-              i samma släkt sedan år 1982 då Siss och Thomas Mattisson med sonen
+              i samma släkt sedan år 1982 då Sissa och Thomas Mattisson med sonen
               Martin köpte marken. Gårdens huvudsakliga verksamheter består idag
               utav skogsbruk och djurhållning. Vår vision är att uppnå cirkulär
               ekonomi där klimatet ska genomsyra tänket i allt vi gör och
@@ -351,6 +369,38 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <section id="footer">
+      <div class="map">
+        <img src="./assets/map.png" alt="map" class="map__map-img">
+
+        <div class="form-container">
+          <form class="form-group">
+            <input type="text" class="form-group__form-field"  placeholder="Namn" required />
+            <input type="email" class="form-group__form-field"  placeholder="E-post" required />
+            <input type="number" class="form-group__form-field"  placeholder="Telefon" required />
+            <input type="text" class="form-group__form-field"  placeholder="Meddelande" required />
+            <button class="cta-btn cta-btn--form">Skicka Meddelande</button>
+          </form>
+        </div>
+      </div>
+<div class="footer-info">
+  <div class="footer-contact">
+    <p class="footer-contact__heading">Adress</p>
+    <p class="footer-contact__paragraph">Bösakulla 3237</p>
+    <p class="footer-contact__paragraph">289 94 Glimåkra</p>
+  </div>
+  <div class="footer-contact">
+    <p class="footer-contact__heading">Kontakt</p>
+    <a  href="mailto:info@bosakullagard.se"
+    rel="noopener noreferrer nofollow"
+    target="_blank"><p class="footer-contact__paragraph">info@bosakullagard.se</p></a>
+    <p class="footer-contact__paragraph">+46 70 975 10 70</p>
+  </div>
+  
+</div>
+</section>
+    </footer>
 
     <script type="module" src="/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
