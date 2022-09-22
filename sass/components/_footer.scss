@@ -1,0 +1,49 @@
+@use '../abstracts/' as *;
+
+.footer {
+  background-color: var(--bg-clr-primary);
+  padding: 20rem 0;
+}
+
+.map {
+  transform: scale(1.1);
+  width: 100%;
+
+  @include respond(md) {
+    transform: scale(1);
+    margin-right: 0;
+  }
+
+  &__map-img {
+    position: relative;
+    width: 100vw;
+  }
+}
+
+.footer-info {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+
+  @include respond(md) {
+    @include flex-config($justify: space-around);
+    width: 50%;
+    text-align: left;
+  }
+}
+
+.footer-contact {
+  &__heading {
+    padding: 4rem 0;
+
+    @include respond(md) {
+      padding: 0;
+      padding-bottom: 2rem;
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  &__paragraph {
+    padding: 0.5rem 0;
+  }
+}
