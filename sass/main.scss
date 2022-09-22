@@ -3,10 +3,6 @@
 @use './utilities/' as *;
 @use './components/' as *;
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   position: relative;
   overflow-x: hidden;
@@ -38,7 +34,12 @@ body {
   &__logo-mobile {
     @include position($pos: absolute, $top: 50%, $left: 50%);
     transform: translate(-50%, -50%);
+    width: 20rem;
     z-index: 2;
+
+    @include respond(sm) {
+      width: 30rem;
+    }
 
     @include respond(md) {
       display: none;
@@ -57,8 +58,7 @@ body {
 .section {
   position: relative;
   background-color: var(--bg-clr-primary);
-  color: var(--clr-light-white);
-  border-bottom: var(--brdr-section);
+  color: var(--clr-dark);
 
   @include respond(md) {
     color: var(--clr-dark);
@@ -70,7 +70,6 @@ body {
   padding: var(--row-padding);
 
   @include respond(md) {
-    min-height: 100vh;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -144,6 +143,7 @@ body {
   }
 
   &__paragraph {
+    font-family: 'EB Garamond', serif;
     font-size: var(--fs-text);
     line-height: var(--lh-paragraph);
     font-style: var(--fst-italic);
