@@ -1,6 +1,9 @@
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 const navItemLinks = document.querySelectorAll('.nav-item');
+const modal = document.getElementById('modal');
+const modalBg = document.getElementById('modal-bg');
+const ctaBtns = document.querySelectorAll('.cta-btn');
 const paginationBullets = document.querySelectorAll('.pagination__bullet');
 const sections = document.querySelectorAll('section');
 const hamburgerBars = document.querySelectorAll('.hamburger__bar');
@@ -42,6 +45,20 @@ navItemLinks.forEach((navItemLink) =>
 window.addEventListener('resize', closeNavLinks);
 hamburger.addEventListener('click', toggleNavLinks);
 
+//Modal
+ctaBtns.forEach((ctaBtn) => {
+  ctaBtn.addEventListener('click', openModal);
+});
+
+modalBg.addEventListener('click', closeModal);
+
+function openModal() {
+  modal.classList.add('modal-open');
+}
+
+function closeModal() {
+  modal.classList.remove('modal-open');
+}
 //Swiper
 
 const swiper = new Swiper('.mySwiper', {
