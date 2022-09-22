@@ -1,6 +1,6 @@
 .cta-btn {
   background-color: var(--clr-dark);
-  color: var(--bg-clr-primary);
+  color: var(--clr-light-white);
   padding: 1.5rem 4rem;
   outline: none;
   border: none;
@@ -16,5 +16,12 @@
   &:hover {
     transform: translateY(5px);
     background-color: var(--clr-black);
+  }
+
+  &--form {
+    display: block;
+    box-shadow: none;
+    font-size: 1rem;
+    text-transform: none;
   }
 }
