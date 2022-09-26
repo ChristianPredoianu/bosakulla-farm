@@ -6,17 +6,16 @@
 }
 
 .map {
-  transform: scale(1.1);
-  width: 100%;
-
-  @include respond(md) {
-    transform: scale(1);
-    margin-right: 0;
-  }
+  @include flex-config($justify: center);
+  position: relative;
 
   &__map-img {
-    position: relative;
-    width: 100vw;
+    transform: scale(1.1);
+
+    @include respond(md) {
+      transform: scale(1);
+      margin-right: 0;
+    }
   }
 }
 
@@ -26,13 +25,16 @@
   font-size: clamp(1.2rem, 2vw, 1.5rem);
 
   @include respond(md) {
-    @include flex-config($justify: space-around);
-    width: 50%;
+    display: flex;
     text-align: left;
   }
 }
 
 .footer-contact {
+  &:not(:first-of-type) {
+    margin-left: 10rem;
+  }
+
   &__heading {
     padding: 4rem 0;
 

@@ -4,17 +4,27 @@
   display: none;
   @include position($pos: absolute, $top: 50%, $left: 50%);
   transform: translate(-50%, -50%);
-  padding: 10rem 10rem;
+  width: 35rem;
+  padding: 5rem 3rem 10rem 3rem;
   border-radius: 1rem;
   background-color: var(--clr-light-white);
-  margin-left: 20rem;
+  margin-left: 30rem;
 
   @include respond(md) {
     display: block;
   }
 
   @include respond(lg) {
+    width: 50rem;
+    padding: 5rem 5rem 10rem 5rem;
   }
+}
+
+.form-container--modal {
+  display: block;
+  position: initial;
+  transform: translate(0);
+  margin-left: 0;
 }
 
 .form-group {
@@ -26,9 +36,9 @@
     border: 0;
     border-bottom: 1px solid var(--clr-black);
     outline: 0;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: var(--clr-black);
-    padding: 1.5rem 0 0.5rem 0;
+    padding: 1.5rem 0 1rem 0;
     background: transparent;
     transition: border-color 0.2s;
 
@@ -42,6 +52,8 @@
     }
 
     &::placeholder {
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
       color: var(--clr-black);
       font-weight: var(--fw-bold);
       transition: transform 0.2s;
@@ -51,16 +63,43 @@
       color: hsl(0, 1%, 32%);
 
       &::placeholder {
-        transform: translateY(-15px);
+        transform: translateY(-20px);
         color: hsl(0, 0%, 50%);
       }
     }
   }
+
+  &__submit-btn {
+    width: fit-content;
+    background-color: var(--clr-dark);
+    color: var(--clr-light-white);
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 5rem;
+    border-radius: 3rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(5px);
+      background-color: var(--clr-black);
+    }
+  }
 }
 
-.form-container--modal {
-  display: block;
-  position: initial;
-  transform: translate(0);
-  margin-left: 0;
+.form-input-container {
+  @include respond(lg) {
+    padding: 1rem 0;
+  }
+}
+
+.form-error {
+  display: none;
+  font-size: 1.5rem;
+  color: hsl(0, 100%, 50%);
+  text-align: center;
 }
