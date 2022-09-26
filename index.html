@@ -68,7 +68,7 @@
             <input type="email" class="form-group__form-field"  placeholder="E-post" required />
             <input type="number" class="form-group__form-field"  placeholder="Telefon" required />
             <input type="text" class="form-group__form-field"  placeholder="Meddelande" required />
-            <button class="cta-btn cta-btn--form">Skicka Meddelande</button>
+            <button class="form-group__submit-btn">Skicka Meddelande</button>
           </form>
         </div>
 
@@ -106,7 +106,7 @@
           ><div class="pagination__bullet christmas"></div
         ></a>
         <a href="#mashines"><div class="pagination__bullet mashines"></div></a>
-        <a href="#footer"><div class="pagination__bullet footer-section"></div></a>
+        <a href="#footer-section"><div class="pagination__bullet footer-section"></div></a>
       </div>
       <div class="row container first-row">
         <div class="column">
@@ -370,21 +370,29 @@
       </div>
     </section>
     <footer class="footer">
-      <section id="footer">
+      <section id="footer-section">
       <div class="map">
         <img src="./assets/map.png" alt="map" class="map__map-img">
-
         <div class="form-container">
-          <form class="form-group">
-            <input type="text" class="form-group__form-field"  placeholder="Namn" required />
+          <form class="form-group" id="contact-form">
+            <div class="form-input-container">
+            <input type="text" class="form-group__form-field" placeholder="Namn" required />
+            </div>
+            <div class="form-input-container">
             <input type="email" class="form-group__form-field"  placeholder="E-post" required />
+            </div>
+            <div class="form-input-container" id="form-input">
             <input type="number" class="form-group__form-field"  placeholder="Telefon" required />
-            <input type="text" class="form-group__form-field"  placeholder="Meddelande" required />
-            <button class="cta-btn cta-btn--form">Skicka Meddelande</button>
+            </div>
+            <div class="form-input-container">
+            <input type="text" class="form-group__form-field" id="message-input"  placeholder="Meddelande" required />
+            </div>
+            <p class="form-error">Du måste fylla i fältet</p>
+            <button class="form-group__submit-btn">Skicka Meddelande</button>
           </form>
         </div>
       </div>
-<div class="footer-info">
+<div class="footer-info container">
   <div class="footer-contact">
     <p class="footer-contact__heading">Adress</p>
     <p class="footer-contact__paragraph">Bösakulla 3237</p>
@@ -397,14 +405,13 @@
     target="_blank"><p class="footer-contact__paragraph">info@bosakullagard.se</p></a>
     <p class="footer-contact__paragraph">+46 70 975 10 70</p>
   </div>
-  
 </div>
 </section>
     </footer>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
