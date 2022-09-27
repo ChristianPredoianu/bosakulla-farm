@@ -63,15 +63,17 @@
       <div class="modal__bg" id="modal-bg"></div>
       <div class="modal__container">
         <div class="form-container form-container--modal">
-          <form class="form-group">
-            <input type="text" class="form-group__form-field"  placeholder="Namn" required />
-            <input type="email" class="form-group__form-field"  placeholder="E-post" required />
-            <input type="number" class="form-group__form-field"  placeholder="Telefon" required />
-            <input type="text" class="form-group__form-field"  placeholder="Meddelande" required />
-            <button class="form-group__submit-btn">Skicka Meddelande</button>
+          <form action="mail.php" method="POST" class="form-group" id="modal-form">
+            <input type="text" class="form-group__form-field" name="name" placeholder="Namn" required />
+            <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" class="form-group__form-field"  placeholder="E-post" required />
+            <input type="tel" pattern="^[+]?[1-9][0-9]{7,14}$" name="tel" class="form-group__form-field" id="modal-phone-input"  placeholder="Telefon" required />
+            <small>Format:+46xxxxxxxxx</small>
+            <input type="text" pattern=".{15,}" name="message" class="form-group__form-field" id="modal-msg-input"  placeholder="Meddelande" required />
+            <small>Minst 15 bokstäver</small>
+            <button type="submit" class="form-group__submit-btn">Skicka Meddelande</button>
           </form>
         </div>
-
+        <div class="modal__close" id="close-modal"><img src="./assets/close.png" alt="close modal"></div>
       </div>
     </div>
     <section class="hero-section" id="hero">
@@ -372,23 +374,23 @@
     <footer class="footer">
       <section id="footer-section">
       <div class="map">
-        <img src="./assets/map.png" alt="map" class="map__map-img">
         <div class="form-container">
-          <form class="form-group" id="contact-form">
+          <form class="form-group" id="footer-form">
             <div class="form-input-container">
             <input type="text" class="form-group__form-field" placeholder="Namn" required />
             </div>
             <div class="form-input-container">
-            <input type="email" class="form-group__form-field"  placeholder="E-post" required />
-            </div>
-            <div class="form-input-container" id="form-input">
-            <input type="number" class="form-group__form-field"  placeholder="Telefon" required />
+            <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" class="form-group__form-field" placeholder="E-post" required />
             </div>
             <div class="form-input-container">
-            <input type="text" class="form-group__form-field" id="message-input"  placeholder="Meddelande" required />
+              <input type="tel" pattern="^[+]?[1-9][0-9]{7,14}$" class="form-group__form-field" id="modal-phone-input"  placeholder="Telefon" required />
+              <small>Format:+46xxxxxxxxx</small>
             </div>
-            <p class="form-error">Du måste fylla i fältet</p>
-            <button class="form-group__submit-btn">Skicka Meddelande</button>
+            <div class="form-input-container">
+            <input type="text" pattern="[a-z]{15}" class="form-group__form-field" id="footer-msg-input" placeholder="Meddelande" required />
+            <small>Minst 15 bokstäver</small> 
+            </div>
+            <button class="form-group__submit-btn" id="footer-sumbit-form-btn">Skicka Meddelande</button>
           </form>
         </div>
       </div>
@@ -404,6 +406,20 @@
     rel="noopener noreferrer nofollow"
     target="_blank"><p class="footer-contact__paragraph">info@bosakullagard.se</p></a>
     <p class="footer-contact__paragraph">+46 70 975 10 70</p>
+    <div class="footer-contact-social-media">
+      <a
+      href="https://www.instagram.com/bosakullagard/"
+      rel="noopener noreferrer nofollow"
+      target="_blank"
+      class="column-text__link">
+      <img src="./assets/instagram.png" class="footer-contact-social-media__icon" alt="instagram"></a>
+      <a
+      href="mailto:rickard@bosakullagard.se"
+      rel="noopener noreferrer nofollow"
+      target="_blank"
+      class="column-text__link"> 
+      <img src="./assets/mail.png" class="footer-contact-social-media__icon" alt="email"></a>
+  </div>
   </div>
 </div>
 </section>
