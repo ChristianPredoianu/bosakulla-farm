@@ -1,9 +1,14 @@
-const modal = document.getElementById('modal');
+const modal = document.getElementById('modal'),
+  closeModalBtn = document.getElementById('close-modal');
 
-export function openModal() {
+export function openModal(e) {
+  e.stopPropagation();
   modal.classList.add('modal-open');
 }
 
-export function closeModal() {
+export function closeModal(e) {
+  e.stopPropagation();
   modal.classList.remove('modal-open');
 }
+
+closeModalBtn.addEventListener('click', closeModal);
