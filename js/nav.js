@@ -25,12 +25,8 @@ export default () => {
   }
 
   navItemLinks.forEach((navItemLink) =>
-    navItemLink.addEventListener('click', function () {
+    navItemLink.addEventListener('click', () => {
       closeNavLinks();
-      navItemLinks.forEach((navItemLink) =>
-        navItemLink.classList.remove('active-link')
-      );
-      this.classList.add('active-link');
     })
   );
 
