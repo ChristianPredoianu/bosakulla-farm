@@ -12,7 +12,6 @@ body {
   position: relative;
   background-size: cover;
   min-height: 100vh;
-  border-bottom: var(--brdr-section);
 
   &__bg-video {
     position: absolute;
@@ -41,7 +40,7 @@ body {
       width: 30rem;
     }
 
-    @include respond(md) {
+    @include respond(lg) {
       display: none;
     }
   }
@@ -59,10 +58,6 @@ body {
   position: relative;
   background-color: var(--bg-clr-primary);
   color: var(--clr-dark);
-
-  @include respond(md) {
-    color: var(--clr-dark);
-  }
 }
 
 .row {

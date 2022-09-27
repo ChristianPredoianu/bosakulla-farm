@@ -23,6 +23,12 @@
     justify-content: center;
     height: 100%;
   }
+
+  &__close {
+    @include position($pos: absolute, $top: 2rem, $right: 2rem);
+    width: 5rem;
+    cursor: pointer;
+  }
 }
 
 .modal-open {

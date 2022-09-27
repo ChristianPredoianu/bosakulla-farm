@@ -7,7 +7,7 @@
   z-index: 500;
   width: 100%;
 
-  @include respond(md) {
+  @include respond(lg) {
     @include position($pos: absolute, $top: 4rem);
     min-height: 5vh;
   }
@@ -18,7 +18,7 @@
   width: 100%;
   z-index: 50;
 
-  @include respond(md) {
+  @include respond(lg) {
     justify-content: center;
   }
 
@@ -40,9 +40,10 @@
   transition: all 0.2s ease-in;
   letter-spacing: 0.2rem;
 
-  @include respond(md) {
+  @include respond(lg) {
     position: initial;
     height: auto;
+    font-size: 1.3rem;
     color: var(--clr-light-white);
     font-weight: var(--fw-normal);
 
@@ -63,7 +64,7 @@
 .nav-logo {
   display: none;
 
-  @include respond(md) {
+  @include respond(lg) {
     display: block;
     width: 10rem;
   }
@@ -76,7 +77,7 @@
   cursor: pointer;
   z-index: 200;
 
-  @include respond(md) {
+  @include respond(lg) {
     &::after {
       @include pseudo($bottom: -1rem, $left: 0);
       transition: all 0.5s ease;
@@ -92,8 +93,15 @@
   }
 }
 
+.nav-logo {
+  width: 25rem;
+  &__img {
+    width: 100%;
+  }
+}
+
 .active-link {
-  @include respond(md) {
+  @include respond(lg) {
     &::after {
       @include pseudo($bottom: -1rem, $left: 0);
       border-bottom: 1px solid var(--clr-light-white);
@@ -107,7 +115,12 @@
   @include position($pos: absolute, $top: 2rem, $right: 4rem);
   z-index: 200;
 
-  @include respond(md) {
+  @include respond(sm) {
+    top: 3rem;
+    right: 5rem;
+  }
+
+  @include respond(lg) {
     display: none;
   }
 
@@ -126,5 +139,9 @@
     margin: 0.5rem auto;
     transition: all 0.3s ease-in-out;
     background-color: var(--clr-light-white);
+
+    @include respond(sm) {
+      height: 0.4rem;
+    }
   }
 }
