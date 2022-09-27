@@ -4,11 +4,15 @@ import gsapMain from './gsapMain';
 import { openModal, closeModal } from './modal';
 import { setActiveBulletClick, setActivebulletScroll } from './pagination';
 
-const ctaBtns = document.querySelectorAll('.cta-btn');
-const modalBg = document.getElementById('modal-bg');
-const paginationBullets = document.querySelectorAll('.pagination__bullet');
-const sections = document.querySelectorAll('section');
-const form = document.getElementById('contact-form');
+const ctaBtns = document.querySelectorAll('.cta-btn'),
+  modalBg = document.getElementById('modal-bg'),
+  paginationBullets = document.querySelectorAll('.pagination__bullet'),
+  sections = document.querySelectorAll('section'),
+  modalForm = document.getElementById('modal-form'),
+  footerForm = document.getElementById('footer-form'),
+  modalMsgInput = document.getElementById('modal-msg-input'),
+  footerMsgInput = document.getElementById('footer-msg-input'),
+  footerMap = document.getElementById('footer-map');
 
 nav();
 swiper();
