@@ -10,8 +10,10 @@ body {
 
 .hero-section {
   position: relative;
-  background-size: cover;
   min-height: 100vh;
+  background-image: url('../assets/farm-place.JPG');
+  background-position: center;
+  background-size: cover;
 
   &__bg-video {
     position: absolute;
@@ -24,9 +26,9 @@ body {
   &__overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(3, 3, 3, 0.3);
     width: 100;
     height: 100%;
+    background-color: var(--clr-overlay);
     z-index: 1;
   }
 
@@ -48,9 +50,9 @@ body {
   &__arrow-down {
     @include position($pos: absolute, $bottom: 5rem, $left: 50%);
     transform: translate(-50%, -5rem);
-    animation: MoveUpDown 1.5s linear infinite;
     z-index: 50;
     width: 3rem;
+    animation: MoveUpDown 1.5s linear infinite;
   }
 }
 
@@ -78,7 +80,7 @@ body {
   }
 
   &__img {
-    width: 60%;
+    width: 70%;
 
     @include respond(md) {
       width: 80%;
@@ -142,11 +144,8 @@ body {
     font-size: var(--fs-text);
     line-height: var(--lh-paragraph);
     font-style: var(--fst-italic);
-
-    @include respond(md) {
-      text-align: justify;
-      text-justify: inter-word;
-    }
+    text-align: justify;
+    text-justify: inter-character;
 
     &:not(:first-of-type) {
       margin-top: 1.5rem;
@@ -176,12 +175,11 @@ body {
 
 .section-swiper {
   background-color: var(--bg-clr-primary);
-  padding: 5rem 2rem;
-  border-bottom: var(--brdr-section);
+  padding: 3rem 0 5rem 0;
+}
 
-  @include respond(md) {
-    padding: 0;
-  }
+.map {
+  background-image: url('../assets/map-mobile.png');
 }
 
 @keyframes MoveUpDown {
