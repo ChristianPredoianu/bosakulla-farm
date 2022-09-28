@@ -12,24 +12,27 @@
 .map {
   @include flex-config($justify: center);
   position: relative;
-  background-image: url('../../assets/map-mobile.png');
   padding: 25rem 0;
   background-size: cover;
-  background-position: center;
+  background-position: left;
 }
 
 .footer-info {
-  margin-top: 10rem;
-  text-align: center;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-top: 5rem;
+  text-align: center;
+  padding-bottom: 2rem;
 
   @include respond(md) {
     display: flex;
     text-align: left;
+    margin-top: 10rem;
   }
 }
 
 .footer-contact {
+  font-size: 1.2rem;
+
   @include respond(md) {
     &:not(:first-of-type) {
       margin-left: 10rem;
@@ -38,16 +41,17 @@
 
   &__heading {
     padding: 4rem 0;
+    font-weight: var(--fw-bold);
 
     @include respond(md) {
       padding: 0;
       padding-bottom: 2rem;
-      font-weight: var(--fw-bold);
     }
   }
 
   &__paragraph {
     padding: 0.5rem 0;
+    font-weight: var(--fw-bold);
   }
 }
 
