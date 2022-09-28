@@ -8,28 +8,28 @@
     @include position($pos: absolute, $top: 50%, $left: 50%);
     transform: translate(-50%, -50%);
     width: 35rem;
-    padding: 5rem 3rem 10rem 3rem;
-    border-radius: 1rem;
     background-color: var(--clr-light-white);
     margin-left: 25rem;
+    padding: 4rem 3rem 10rem 3rem;
+    border-radius: 1rem;
   }
 
   @include respond(lg) {
     width: 50rem;
-    padding: 5rem 5rem 10rem 5rem;
     margin-left: 30rem;
+    padding: 5rem 5rem 10rem 5rem;
   }
 }
 
 .form-container--modal {
   display: block;
   position: initial;
+  width: 90%;
+  background-color: var(--clr-light-white);
   transform: translate(0);
   margin-left: 0;
   padding: 5rem 2rem 10rem 2rem;
   border-radius: 1rem;
-  background-color: var(--clr-light-white);
-  width: 90%;
 
   @include respond(sm) {
     width: 60%;
@@ -51,12 +51,12 @@
 
   &__form-field {
     width: 100%;
-    border: 0;
-    border-bottom: 1px solid var(--clr-black);
-    outline: 0;
     font-size: 1.8rem;
     color: var(--clr-black);
     padding: 1.5rem 0 1rem 0;
+    border: 0;
+    border-bottom: 1px solid var(--clr-black);
+    outline: 0;
     background: transparent;
     transition: border-color 0.2s;
 
@@ -69,14 +69,14 @@
     }
 
     &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
       margin: 0;
+      -webkit-appearance: none;
     }
 
     &::placeholder {
       font-size: 1.5rem;
-      letter-spacing: 0.1rem;
       color: var(--clr-black);
+      letter-spacing: 0.1rem;
       font-weight: var(--fw-bold);
       transition: transform 0.2s;
     }
@@ -100,16 +100,16 @@
     width: fit-content;
     background-color: var(--clr-dark);
     color: var(--clr-light-white);
+    font-size: 1rem;
     margin: 0 auto;
+    margin-top: 5rem;
     padding: 2rem 4rem;
     outline: none;
     border: none;
-    font-size: 1rem;
-    margin-top: 5rem;
     border-radius: 3rem;
     letter-spacing: 0.1rem;
-    cursor: pointer;
     transition: transform 0.2s ease;
+    cursor: pointer;
 
     @include respond(sm) {
       font-size: 1.2rem;
