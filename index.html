@@ -1,30 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!--  Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--  Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
-    
+    <!--  Swiper js -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
 
+    <!--  Stylesheet -->
     <link href="./sass/main.scss" rel="stylesheet" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bösakulla Gård</title>
+
+    <!--  Social Media META Tags -->
+    <meta property="og:title" content="Bösakulla gård i Glimåkra." />
+    <meta property="og:description" content="Bösakulla Gård - Glimåkra" />
+    <meta property="og:image" content="./assets/chickens.JPG" />
+    <meta property="og:url" content="http://www.bosakullagard.se" />
+
+    <meta name="Description" content="Bösakulla Gård - Glimåkra " />
+
+    <title>Bösakulla Gård - Glimåkra</title>
   </head>
   <body>
     <header class="header">
@@ -46,10 +63,12 @@
             <img src="./assets/logo.png" alt="" class="nav-logo__img" />
           </li>
           <li class="nav-item">
-            <a href="#mashines" class="nav-item__link">Skogsbruk maskinstation</a>
+            <a href="#mashines" class="nav-item__link"
+              >Skogsbruk maskinstation</a
+            >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-item__link">Kontakt</a>
+            <a href="#footer-section" class="nav-item__link">Kontakt</a>
           </li>
         </ul>
 
@@ -63,17 +82,48 @@
       <div class="modal__bg" id="modal-bg"></div>
       <div class="modal__container">
         <div class="form-container form-container--modal">
-          <form action="mail.php" method="POST" class="form-group" id="modal-form">
-            <input type="text" class="form-group__form-field" name="name" placeholder="Namn" required />
-            <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" class="form-group__form-field"  placeholder="E-post" required />
-            <input type="tel" pattern="^[+]?[1-9][0-9]{7,14}$" name="tel" class="form-group__form-field" id="modal-phone-input"  placeholder="Telefon" required />
+          <form action="mail.php" method="POST" class="form-group">
+            <input
+              type="text"
+              class="form-group__form-field"
+              name="name"
+              placeholder="Namn"
+              required
+            />
+            <input
+              type="email"
+              pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+              name="email"
+              class="form-group__form-field"
+              placeholder="E-post"
+              required
+            />
+            <input
+              type="tel"
+              pattern="^[+]?[1-9][0-9]{7,14}$"
+              name="tel"
+              class="form-group__form-field"
+              placeholder="Telefon"
+              required
+            />
             <small>Format:+46xxxxxxxxx</small>
-            <input type="text" pattern=".{15,}" name="message" class="form-group__form-field" id="modal-msg-input"  placeholder="Meddelande" required />
+            <input
+              type="text"
+              pattern=".{15,}"
+              name="message"
+              class="form-group__form-field"
+              placeholder="Meddelande"
+              required
+            />
             <small>Minst 15 bokstäver</small>
-            <button type="submit" class="form-group__submit-btn">Skicka Meddelande</button>
+            <button type="submit" class="form-group__submit-btn">
+              Skicka Meddelande
+            </button>
           </form>
         </div>
-        <div class="modal__close" id="close-modal"><img src="./assets/close.png" alt="close modal"></div>
+        <div class="modal__close" id="close-modal">
+          <img src="./assets/close.png" alt="close modal" />
+        </div>
       </div>
     </div>
     <section class="hero-section" id="hero">
@@ -82,9 +132,11 @@
         <source src="./assets/bg-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-  
-    </div>
-      <img src="./assets/logo.png" class="hero-section__logo-mobile" alt="logo" />
+      <img
+        src="./assets/logo.png"
+        class="hero-section__logo-mobile"
+        alt="logo"
+      />
       <a href="#farm">
         <img
           src="./assets/arrow-down.png"
@@ -108,7 +160,9 @@
           ><div class="pagination__bullet christmas"></div
         ></a>
         <a href="#mashines"><div class="pagination__bullet mashines"></div></a>
-        <a href="#footer-section"><div class="pagination__bullet footer-section"></div></a>
+        <a href="#footer-section"
+          ><div class="pagination__bullet footer-section"></div
+        ></a>
       </div>
       <div class="row container first-row">
         <div class="column">
@@ -119,18 +173,18 @@
               snapphane land i Östra Göinge. Gården består utav ca 65 hektar
               mark, varav 20 hektar bete/ vall och ca 45 hektar skog. Vi är
               sjätte generationen som bor på gården här idag. Gården har stannat
-              i samma släkt sedan år 1982 då Sissa och Thomas Mattisson med sonen
-              Martin köpte marken. Gårdens huvudsakliga verksamheter består idag
-              utav skogsbruk och djurhållning. Vår vision är att uppnå cirkulär
-              ekonomi där klimatet ska genomsyra tänket i allt vi gör och
-              investerar i framöver. "Zero Foot Print" är ett ledord vi anammat
-              på gården, att kunna visa vägen för ett nytt framtida tänk inom
-              ett hållbart lantbruk, som vi sedan ska fortsätta i många framtida
-              generationer utan att påverka naturen och klimatet. På gården
-              använder vi oss utav metoder inom "LEAN Production" som kommer
-              från Japan och fordonsbranschen, vilket innefattar att "eliminera
-              slöseri" och förbättra tillvägagångssätten med hjälp utav
-              skandaliserat arbetssätt.
+              i samma släkt sedan år 1982 då Sissa och Thomas Mattisson med
+              sonen Martin köpte marken. Gårdens huvudsakliga verksamheter
+              består idag utav skogsbruk och djurhållning. Vår vision är att
+              uppnå cirkulär ekonomi där klimatet ska genomsyra tänket i allt vi
+              gör och investerar i framöver. "Zero Foot Print" är ett ledord vi
+              anammat på gården, att kunna visa vägen för ett nytt framtida tänk
+              inom ett hållbart lantbruk, som vi sedan ska fortsätta i många
+              framtida generationer utan att påverka naturen och klimatet. På
+              gården använder vi oss utav metoder inom "LEAN Production" som
+              kommer från Japan och fordonsbranschen, vilket innefattar att
+              "eliminera slöseri" och förbättra tillvägagångssätten med hjälp
+              utav skandaliserat arbetssätt.
             </p>
           </div>
         </div>
@@ -139,7 +193,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="section" id="recykle">
       <div class="row container">
         <div class="column">
@@ -179,7 +233,11 @@
           </div>
         </div>
         <div class="column">
-          <img src="./assets/recycle.png" alt="" class="column__img column__img--recykle" />
+          <img
+            src="./assets/recycle.png"
+            alt=""
+            class="column__img column__img--recykle"
+          />
           <p class="column-text__paragraph column-text__img-paragraph">
             Läs gärna mer kring de 16 Svenska klimatmålen på länken nedan i
             jordbrukssektorn:
@@ -198,15 +256,35 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-slide--1">
-            <img src="./assets/farm1.jpg" alt="" />
+            <img src="./assets/animals.jpg" alt="" />
             <div class="swiper-overlay"></div>
           </div>
-          <div class="swiper-slide swiper-slide--2">
-            <img src="./assets/farm2.jpg" alt="" />
+          <div class="swiper-slide">
+            <img src="./assets/cows.jpg" alt="" />
             <div class="swiper-overlay"></div>
           </div>
-          <div class="swiper-slide swiper-slide--3">
-            <img src="./assets/farm3.jpg" alt="" />
+          <div class="swiper-slide">
+            <img src="./assets/farm-place.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/fireplace.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/meadow.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/cars.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/chickens.jpg" alt="" />
+            <div class="swiper-overlay"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/tractor.jpg" alt="" />
             <div class="swiper-overlay"></div>
           </div>
         </div>
@@ -238,7 +316,11 @@
           </div>
         </div>
         <div class="column">
-          <img src="./assets/honey.png" alt="" class="column__img column__img--honey" />
+          <img
+            src="./assets/honey.png"
+            alt=""
+            class="column__img column__img--honey"
+          />
         </div>
       </div>
     </section>
@@ -367,62 +449,102 @@
           </div>
         </div>
         <div class="column">
-          <img src="./assets/mashines.png" alt="" class="column__img column__img--mashines" />
+          <img
+            src="./assets/mashines.png"
+            alt=""
+            class="column__img column__img--mashines"
+          />
         </div>
       </div>
     </section>
     <footer class="footer">
       <section id="footer-section">
-      <div class="map">
-        <div class="form-container">
-          <form class="form-group" id="footer-form">
-            <div class="form-input-container">
-            <input type="text" class="form-group__form-field" placeholder="Namn" required />
-            </div>
-            <div class="form-input-container">
-            <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" class="form-group__form-field" placeholder="E-post" required />
-            </div>
-            <div class="form-input-container">
-              <input type="tel" pattern="^[+]?[1-9][0-9]{7,14}$" class="form-group__form-field" id="modal-phone-input"  placeholder="Telefon" required />
-              <small>Format:+46xxxxxxxxx</small>
-            </div>
-            <div class="form-input-container">
-            <input type="text" pattern="[a-z]{15}" class="form-group__form-field" id="footer-msg-input" placeholder="Meddelande" required />
-            <small>Minst 15 bokstäver</small> 
-            </div>
-            <button class="form-group__submit-btn" id="footer-sumbit-form-btn">Skicka Meddelande</button>
-          </form>
+        <div class="map">
+          <div class="form-container">
+            <form class="form-group">
+              <div class="form-input-container">
+                <input
+                  type="text"
+                  class="form-group__form-field"
+                  placeholder="Namn"
+                  required
+                />
+              </div>
+              <div class="form-input-container">
+                <input
+                  type="email"
+                  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                  class="form-group__form-field"
+                  placeholder="E-post"
+                  required
+                />
+              </div>
+              <div class="form-input-container">
+                <input
+                  type="tel"
+                  pattern="^[+]?[1-9][0-9]{7,14}$"
+                  class="form-group__form-field"
+                  placeholder="Telefon"
+                  required
+                />
+                <small>Format:+46xxxxxxxxx</small>
+              </div>
+              <div class="form-input-container">
+                <input
+                  type="text"
+                  pattern="[a-z]{15,}"
+                  class="form-group__form-field"
+                  placeholder="Meddelande"
+                  required
+                />
+                <small>Minst 15 bokstäver</small>
+              </div>
+              <button class="form-group__submit-btn">Skicka Meddelande</button>
+            </form>
+          </div>
         </div>
-      </div>
-<div class="footer-info container">
-  <div class="footer-contact">
-    <p class="footer-contact__heading">Adress</p>
-    <p class="footer-contact__paragraph">Bösakulla 3237</p>
-    <p class="footer-contact__paragraph">289 94 Glimåkra</p>
-  </div>
-  <div class="footer-contact">
-    <p class="footer-contact__heading">Kontakt</p>
-    <a  href="mailto:info@bosakullagard.se"
-    rel="noopener noreferrer nofollow"
-    target="_blank"><p class="footer-contact__paragraph">info@bosakullagard.se</p></a>
-    <p class="footer-contact__paragraph">+46 70 975 10 70</p>
-    <div class="footer-contact-social-media">
-      <a
-      href="https://www.instagram.com/bosakullagard/"
-      rel="noopener noreferrer nofollow"
-      target="_blank"
-      class="column-text__link">
-      <img src="./assets/instagram.png" class="footer-contact-social-media__icon" alt="instagram"></a>
-      <a
-      href="mailto:rickard@bosakullagard.se"
-      rel="noopener noreferrer nofollow"
-      target="_blank"
-      class="column-text__link"> 
-      <img src="./assets/mail.png" class="footer-contact-social-media__icon" alt="email"></a>
-  </div>
-  </div>
-</div>
-</section>
+        <div class="footer-info container">
+          <div class="footer-contact">
+            <p class="footer-contact__heading">Adress</p>
+            <p class="footer-contact__paragraph">Bösakulla 3237</p>
+            <p class="footer-contact__paragraph">289 94 Glimåkra</p>
+          </div>
+          <div class="footer-contact">
+            <p class="footer-contact__heading">Kontakt</p>
+            <a
+              href="mailto:info@bosakullagard.se"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              ><p class="footer-contact__paragraph">info@bosakullagard.se</p></a
+            >
+            <p class="footer-contact__paragraph">+46 70 975 10 70</p>
+            <div class="footer-contact-social-media">
+              <a
+                href="https://www.instagram.com/bosakullagard/"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="column-text__link"
+              >
+                <img
+                  src="./assets/instagram.png"
+                  class="footer-contact-social-media__icon"
+                  alt="instagram"
+              /></a>
+              <a
+                href="mailto:info@bosakullagard.se"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="column-text__link"
+              >
+                <img
+                  src="./assets/mail.png"
+                  class="footer-contact-social-media__icon"
+                  alt="email"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </footer>
 
     <script type="module" src="/js/main.js"></script>
