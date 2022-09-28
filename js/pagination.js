@@ -14,7 +14,7 @@ export function setActivebulletScroll(paginationBullets, sections) {
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 300) {
+    if (scrollY >= sectionTop - 200) {
       currentSection = section.id;
     }
   });
