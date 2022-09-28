@@ -42,7 +42,7 @@ export default () => {
 
     ScrollTrigger.create({
       trigger: section,
-      start: 'top center',
+      start: 'top +600px',
 
       onEnter: () => {
         fade.play(), scale.play();
