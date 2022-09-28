@@ -5,6 +5,9 @@
   --clr-light-white: hsl(0, 0%, 96%);
   --clr-black: hsl(0, 0%, 0%);
   --clr-dark: hsl(0, 0%, 13%);
+  --clr-overlay: hsla(0, 0%, 1%, 0.3);
+  --box-shadow: hsla(240, 30%, 28%, 0.25) 0px 13px 27px -5px,
+    hsla(0, 0%, 0%, 0.3) 0px 8px 16px -8px;
 
   --fs-heading: clamp(1.8rem, 2vw, 3rem);
   --fs-text: clamp(1.7rem, 2vw, 2.3rem);
@@ -13,9 +16,9 @@
   --fst-italic: italic;
   --lh-paragraph: 1.5;
 
-  --row-padding: 10rem 3rem;
+  --row-padding: 7rem 3rem;
 
-  --box-shadow: hsla(0, 0%, 0%, 0.25) 0px 54px 55px,
-    hsla(0, 0%, 0%, 0.12) 0px -12px 30px, hsla(0, 0%, 0%, 0.12) 0px 4px 6px,
-    hsla(0, 0%, 0%, 0.17) 0px 12px 13px, hsla(0, 0%, 0%, 0.09) 0px -3px 5px;
+  @include respond(md) {
+    --row-padding: 10rem 3rem;
+  }
 }
