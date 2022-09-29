@@ -9,9 +9,14 @@ const ctaBtns = document.querySelectorAll('.cta-btn'),
   paginationBullets = document.querySelectorAll('.pagination__bullet'),
   sections = document.querySelectorAll('section');
 
+removeHash();
 nav();
 swiper();
 gsapMain();
+
+function removeHash() {
+  history.replaceState(null, null, ' ');
+}
 
 setActiveBulletClick(paginationBullets);
 
