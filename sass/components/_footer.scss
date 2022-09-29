@@ -73,3 +73,36 @@
     }
   }
 }
+
+.footer-credit {
+  margin-top: 2rem;
+  font-weight: var(--fw-bold);
+  text-align: center;
+
+  @include respond(md) {
+    text-align: left;
+  }
+
+  &__copyright {
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+  }
+
+  &__paragraph {
+    @include flex-config($justify: center, $align: center);
+
+    &:not(:first-of-type) {
+      margin-top: 0.5rem;
+    }
+
+    @include respond(md) {
+      justify-content: flex-start;
+    }
+  }
+
+  span {
+    &:hover {
+      color: hsl(0, 1%, 34%);
+    }
+  }
+}
