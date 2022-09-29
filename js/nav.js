@@ -42,9 +42,3 @@ export default () => {
   window.addEventListener('resize', closeNavLinks);
   hamburger.addEventListener('click', toggleNavLinks);
 };
-
-removeHash();
-
-function removeHash() {
-  history.replaceState(null, null, ' ');
-}
