@@ -9,9 +9,9 @@
   border-radius: 3rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  box-shadow: var(--box-shadow);
   transition: transform 0.2s ease;
   cursor: pointer;
+  margin: 7rem auto 0 auto;
 
   &:hover {
     background-color: var(--clr-black);
