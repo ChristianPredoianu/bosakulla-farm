@@ -1,7 +1,5 @@
 export default () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  let mm = gsap.matchMedia();
+  /*   let mm = gsap.matchMedia();
 
   const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power2.out' } });
 
@@ -22,34 +20,16 @@ export default () => {
     return () => {
       tl.kill();
     };
-  });
-
-  //Scrolltrigger
-  gsap.utils.toArray('.section').forEach((section) => {
-    const columnTexts = section.querySelectorAll('.column-text');
-    const columnImgs = section.querySelectorAll('.column__img');
-
-    const fade = gsap
-      .timeline({ paused: true })
-      .from(columnTexts, { opacity: 0, duration: 1.5 });
-
-    const scale = gsap.timeline({ paused: true }).from(columnImgs, {
-      y: 200,
-      opacity: 0,
-      duration: 0.5,
-      scale: 0.5,
-    });
-
-    ScrollTrigger.create({
-      trigger: section,
-      start: 'top +600px',
-
-      onEnter: () => {
-        fade.play(), scale.play();
-      },
-      onLeaveBack: () => {
-        fade.reverse(), scale.reverse();
-      },
-    });
-  });
+  }); */
 };
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray('.snap-section').forEach((layer) => {
+  ScrollTrigger.create({
+    trigger: layer,
+    start: 'top top',
+    snap: 1,
+    duration: 0.1,
+  });
+});
