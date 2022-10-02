@@ -7,7 +7,7 @@
   overflow: visible !important;
 
   @include respond(md) {
-    height: 105vh;
+    max-height: 100vh;
   }
 }
 
@@ -51,7 +51,7 @@
   }
 
   @include respond(lg) {
-    padding: 5rem;
+    padding: 3.5rem;
   }
 }
 
@@ -77,7 +77,7 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: rgb(235, 230, 230);
+  background-color: hsl(0, 11%, 91%);
 
   @include respond(md) {
     display: none;

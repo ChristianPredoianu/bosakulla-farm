@@ -65,44 +65,25 @@
     justify-content: flex-start;
   }
 
-  &__icon {
-    transition: transform 0.2s ease;
+  &__credit {
+    margin-top: 1rem;
+    cursor: pointer;
 
-    &:hover {
-      transform: scale(1.05);
+    @include respond(md) {
+      margin: 1rem 0 0 1rem;
     }
   }
 }
 
-.footer-credit {
-  margin-top: 2rem;
-  font-weight: var(--fw-bold);
-  text-align: center;
+.footer-icons {
+  display: flex;
 
-  @include respond(md) {
-    text-align: left;
-  }
+  &__icon {
+    transition: transform 0.2s ease;
+    width: 3.5rem;
 
-  &__copyright {
-    font-size: 1.8rem;
-    margin-right: 0.5rem;
-  }
-
-  &__paragraph {
-    @include flex-config($justify: center, $align: center);
-
-    &:not(:first-of-type) {
-      margin-top: 0.5rem;
-    }
-
-    @include respond(md) {
-      justify-content: flex-start;
-    }
-  }
-
-  span {
     &:hover {
-      color: hsl(0, 1%, 34%);
+      transform: scale(1.05);
     }
   }
 }
