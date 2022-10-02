@@ -14,10 +14,12 @@ export function setActivebulletScroll(paginationBullets, sections) {
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 200) {
+    if (scrollY >= sectionTop - 300) {
       currentSection = section.id;
     }
   });
+
+  console.log(currentSection);
 
   paginationBullets.forEach((paginationBullet) => {
     paginationBullet.classList.remove('active-bullet');
