@@ -61,11 +61,11 @@ body {
   position: relative;
   background-color: var(--bg-clr-primary);
   color: var(--clr-dark);
-  min-height: 100vh;
 
-  /* @include respond(lg) {
-    max-height: 100vh;
-  } */
+  @include respond(lg) {
+    min-height: 100vh;
+    padding: 0;
+  }
 }
 
 .row {
@@ -103,10 +103,15 @@ body {
         transform: scale(1.3);
       }
 
+      @include respond(md) {
+        padding: 3rem 0 5rem 0;
+      }
+
       @include respond(lg) {
         width: 70%;
         transform: scale(1.9);
         margin-right: -15rem;
+        padding: 0;
       }
 
       @include respond(lg) {
@@ -150,6 +155,10 @@ body {
     letter-spacing: 0.1rem;
 
     @include respond(md) {
+      margin-top: 5rem;
+    }
+
+    @include respond(lg) {
       margin-top: 0;
     }
   }
@@ -189,9 +198,10 @@ body {
 
 .section-swiper {
   background-color: var(--bg-clr-primary);
+  height: 100%;
 
-  @include respond(md) {
-    max-height: 100vh;
+  @include respond(lg) {
+    height: 100vh;
   }
 }
 
