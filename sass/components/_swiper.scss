@@ -41,9 +41,8 @@
   display: none;
   background-color: transparent;
   color: var(--clr-light-white);
-  font-size: 10rem !important;
-  padding: 3rem;
-  border: 1px solid var(--clr-light-white);
+  padding: 2rem;
+  border: 2px solid var(--clr-light-white);
   border-radius: 50%;
 
   @include respond(md) {
@@ -51,16 +50,18 @@
   }
 
   @include respond(lg) {
-    padding: 3.5rem;
+    padding: 3rem;
   }
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 3rem !important;
+  @include respond(md) {
+    font-size: 2rem !important;
+  }
 
   @include respond(lg) {
-    font-size: 5rem !important;
+    font-size: 2.5rem !important;
   }
 }
 
