@@ -10,9 +10,18 @@
   --fs-heading: clamp(1.8rem, 2vw, 3rem);
   --fs-text: clamp(1.7rem, 2vw, 2.3rem);
   --fw-normal: 400;
+  --fw-medium: 500;
   --fw-bold: 700;
   --fst-italic: italic;
   --lh-paragraph: 1.5;
 
   --row-padding: 7rem 3rem;
+
+  @include respond(sm) {
+    --row-padding: 20rem 3rem;
+  }
+
+  @include respond(lg) {
+    --row-padding: 7rem 3rem;
+  }
 }
