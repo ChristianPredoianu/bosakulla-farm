@@ -15,7 +15,7 @@
   --fst-italic: italic;
   --lh-paragraph: 1.5;
 
-  --row-padding: 7rem 3rem;
+  --row-padding: 12rem 3rem;
 
   @include respond(sm) {
     --row-padding: 20rem 3rem;
