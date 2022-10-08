@@ -84,11 +84,13 @@
 }
 
 .footer-icons {
-  display: flex;
+  @include flex-config($justify: center);
+  gap: 1rem;
+  width: 100%;
 
   &__icon {
-    transition: transform 0.2s ease;
-    width: 3.5rem;
+    transition: transform 0.05s ease;
+    font-size: 1.5rem;
 
     &:hover {
       transform: scale(1.05);
