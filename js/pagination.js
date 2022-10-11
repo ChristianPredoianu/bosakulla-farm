@@ -19,8 +19,6 @@ export function setActivebulletScroll(paginationBullets, sections) {
     }
   });
 
-  console.log(currentSection);
-
   paginationBullets.forEach((paginationBullet) => {
     paginationBullet.classList.remove('active-bullet');
     if (paginationBullet.classList.contains(currentSection)) {
