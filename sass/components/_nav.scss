@@ -8,7 +8,7 @@
   z-index: 1000;
 
   @include respond(lg) {
-    @include position($pos: absolute, $top: 4rem, $left: -1.5rem);
+    @include position($pos: absolute, $top: 4rem, $left: -1.8rem);
     min-height: 5vh;
   }
 }
