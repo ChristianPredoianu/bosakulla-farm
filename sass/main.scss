@@ -92,48 +92,6 @@ body {
     @include respond(lg) {
       width: 90%;
     }
-
-    &--honey {
-      transform: scale(1.2);
-
-      @include respond(sm) {
-        transform: scale(1.3);
-      }
-
-      @include respond(md) {
-        padding: 3rem 0 5rem 0;
-      }
-
-      @include respond(lg) {
-        width: 70%;
-        transform: scale(1.9);
-        margin-right: -15rem;
-        padding: 0;
-      }
-
-      @include respond(lg) {
-        margin-right: -10rem;
-      }
-    }
-
-    &--mashines {
-      transform: scale(2.3);
-      margin-top: 5rem;
-
-      @include respond(sm) {
-        transform: scale(2);
-      }
-
-      @include respond(lg) {
-        transform: scale(1.9);
-        margin-right: -12rem;
-        margin-top: 0;
-      }
-
-      @include respond(lg) {
-        margin-right: -40rem;
-      }
-    }
   }
 }
 
