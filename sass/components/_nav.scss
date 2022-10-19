@@ -27,7 +27,7 @@
   @include flex-config($direction: column, $justify: center);
   @include position($pos: fixed, $top: 0, $left: -100%);
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   color: var(--bg-clr-primary);
   font-size: 1.2rem;
   font-weight: var(--fw-bold);
@@ -35,6 +35,7 @@
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   transition: all 0.2s ease-in;
+  overflow-y: scroll;
 
   @include respond(lg) {
     min-height: 0;
