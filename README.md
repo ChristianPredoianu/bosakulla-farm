@@ -7,7 +7,7 @@
   </a> 
 
   <h3 align="center">Bösakulla Gård</h3>
-    
+     
   <p align="center">
    Bösakulla Gård
     <br />
