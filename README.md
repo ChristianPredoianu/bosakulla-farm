@@ -56,6 +56,7 @@ A website made for a farm in Sweden.
 ### Built With
 
 * [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+* [Css3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Sass](https://sass-lang.com/)
 * [Vanilla Js](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [PHP](https://www.php.net/)
