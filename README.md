@@ -7,7 +7,7 @@
     <img src="/assets/tractor.JPG" alt="Logo" width="200" height="160">
   </a> 
 
-  <h3 align="center">Bösakulla Gård</h3>
+  <h3 align="center">Bösakulla Farm</h3>
      
   <p align="center">
     <a href="https://github.com/ChristianPredoianu/bosakulla-farm"><strong>Explore the docs »</strong></a>
