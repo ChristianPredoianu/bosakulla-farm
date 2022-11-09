@@ -2,7 +2,7 @@
 
  <!-- PROJECT LOGO -->   
 <br />
-<p align="center">
+<p align="center"> 
   <a href="https://github.com/ChristianPredoianu/bosakulla-farm">
     <img src="/assets/tractor.JPG" alt="Logo" width="200" height="160">
   </a> 
