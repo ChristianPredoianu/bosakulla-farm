@@ -130,6 +130,15 @@ body {
     }
   }
 
+  .text-center {
+    text-align: center;
+    width: 100%;
+  }
+
+  .-mt-2 {
+    margin-top: -0.2rem;
+  }
+
   &__img-paragraph {
     margin-top: 4rem;
     text-align: center;
