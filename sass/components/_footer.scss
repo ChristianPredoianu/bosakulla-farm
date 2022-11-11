@@ -63,34 +63,15 @@
   }
 }
 
-.footer-contact-social-media {
-  @include flex-config($justify: center);
-  margin-top: 1rem;
-  gap: 1rem;
-  cursor: pointer;
-
-  @include respond(md) {
-    justify-content: flex-start;
-  }
-
-  &__credit {
-    margin-top: 1rem;
-    cursor: pointer;
-
-    @include respond(md) {
-      margin: 1rem 0 0 1rem;
-    }
-  }
-}
-
 .footer-icons {
   @include flex-config($justify: center);
   gap: 1rem;
   width: 100%;
+  padding: 5rem 0;
 
   &__icon {
     transition: transform 0.05s ease;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     &:hover {
       transform: scale(1.05);
