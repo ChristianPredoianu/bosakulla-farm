@@ -487,11 +487,12 @@
       <section class="snap-section map-section" id="footer-section">
         <div class="map">
           <div class="form-container">
-            <form class="form-group">
+            <form action="mail.php" method="POST" class="form-group">
               <div class="form-input-container">
                 <input
                   type="text"
                   class="form-group__form-field"
+                  name="name"
                   placeholder="Namn"
                   required
                 />
@@ -501,6 +502,7 @@
                   type="email"
                   pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
                   class="form-group__form-field"
+                  name="email"
                   placeholder="E-post"
                   required
                 />
@@ -510,6 +512,7 @@
                   type="tel"
                   pattern="^[+]?[1-9][0-9]{7,14}$"
                   class="form-group__form-field"
+                  name="tel"
                   placeholder="Telefon"
                   required
                 />
@@ -520,6 +523,7 @@
                   type="text"
                   pattern="[a-z]{15,}"
                   class="form-group__form-field"
+                  name="message"
                   placeholder="Meddelande"
                   required
                 />
