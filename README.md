@@ -1,6 +1,6 @@
 # Bösakulla Farm
 
- <!-- PROJECT LOGO -->   
+  <!-- PROJECT LOGO -->   
 <br />
 <p align="center"> 
   <a href="https://github.com/ChristianPredoianu/bosakulla-farm">
@@ -18,7 +18,7 @@
   </p>
 </p>
 
-  
+   
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
