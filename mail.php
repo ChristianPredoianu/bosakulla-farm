@@ -1,7 +1,5 @@
 <?php 
 
-
-
 if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['tel'])&& isset($_POST['message'])){
     if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         $name = $_POST['name'];
@@ -25,11 +23,9 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['tel'])&& iss
         
                 
         
-                if($status)
-                {
-                    echo'
-
-<!DOCTYPE html>
+    if($status)
+        { echo 
+'<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,19 +42,9 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['tel'])&& iss
         
     </div>
 </body>
-</html>
-
-
-
-';
-                } 
+</html>';
+ } 
     }
 }
-
-    
-
-    
-
-   
 
 ?>
