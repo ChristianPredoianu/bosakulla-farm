@@ -32,10 +32,6 @@ export default () => {
     navItemLink.addEventListener('click', () => {
       closeNavLinks();
       changeHamburgerColor();
-      console.log(
-        document.title,
-        window.location.pathname + window.location.search
-      );
     })
   );
 
