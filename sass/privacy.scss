@@ -1,0 +1,22 @@
+@use './base/' as *;
+@use './utilities/' as *;
+
+.privacy-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.privacy-heading-primary {
+  font-size: 1.8rem;
+}
+
+.privacy-paragraph {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-top: 1rem;
+}
+
+.privacy-heading-secondary {
+  margin-top: 1rem;
+}
