@@ -1,6 +1,7 @@
 import nav from './nav';
 import swiper from './swiper';
 import gsapMain from './gsapMain';
+import cookieconscentInit from './cookieconsentInit';
 import { openModal, closeModal } from './modal';
 import { setActiveBulletClick, setActivebulletScroll } from './pagination';
 
@@ -9,14 +10,10 @@ const ctaBtns = document.querySelectorAll('.cta-btn'),
   paginationBullets = document.querySelectorAll('.pagination__bullet'),
   sections = document.querySelectorAll('section');
 
-removeHash();
 nav();
 swiper();
 gsapMain();
-
-function removeHash() {
-  history.replaceState(null, null, ' ');
-}
+cookieconscentInit();
 
 setActiveBulletClick(paginationBullets);
 
