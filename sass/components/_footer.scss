@@ -73,6 +73,13 @@
     transition: transform 0.05s ease;
     font-size: 2rem;
 
+    &--eu {
+      margin: 0 auto;
+      width: 10%;
+      max-width: 8rem;
+      margin-top: -3rem;
+    }
+
     &:hover {
       transform: scale(1.05);
     }
