@@ -73,15 +73,57 @@
     transition: transform 0.05s ease;
     font-size: 2rem;
 
-    &--eu {
-      margin: 0 auto;
-      width: 10%;
-      max-width: 8rem;
-      margin-top: -3rem;
-    }
-
     &:hover {
       transform: scale(1.05);
+    }
+  }
+}
+
+.european-union {
+  @include flex-config($direction: column, $align: center);
+  background-color: hsl(0, 0%, 100%);
+  row-gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @include respond(md) {
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 3rem;
+  }
+
+  &__icon-container {
+    max-width: 10rem;
+    margin-bottom: 1rem;
+
+    @include respond(md) {
+      margin-bottom: 0;
+      max-width: 12rem;
+    }
+  }
+
+  &__icon {
+    max-width: 100%;
+    height: auto;
+
+    @include respond(md) {
+      max-width: 8rem;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+
+    @include respond(md) {
+      font-size: 1.5rem;
+      width: 60%;
+      text-align: left;
+      margin-left: 3rem;
     }
   }
 }
